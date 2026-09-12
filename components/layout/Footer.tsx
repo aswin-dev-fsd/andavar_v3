@@ -9,7 +9,7 @@ export default function Footer(){
       <div className="grid gap-12 min-[520px]:grid-cols-2 min-[860px]:grid-cols-4">
         <div>
           <div className="text-[20px] font-bold">{isTa?'ஸ்ரீ ஆண்டவர்':'Shri Andavar'}</div>
-          <div className="mt-1 text-[11.5px] font-semibold uppercase tracking-[.13em] text-[#8496A0]">{isTa?'கண் மருத்துவமனை & விழித்திரை மையம்':'Eye Care & Retina Centre'}</div>
+          <div className={`mt-1 text-[11.5px] font-semibold text-[#8496A0] ${isTa?'tracking-normal leading-normal':'uppercase tracking-[.13em]'}`}>{isTa?'கண் மருத்துவமனை & விழித்திரை மையம்':'Eye Care & Retina Centre'}</div>
           <p className="mt-5 max-w-[34ch] text-[17px] leading-[1.65] text-[#C9D3D7]">{isTa?'2013 முதல் பொள்ளாச்சியில் கண்புரை மற்றும் விழித்திரை சிகிச்சை. முதல் பரிசோதனை முதல் இறுதி வரை ஒரே அறுவை சிகிச்சை நிபுணர்.':'Cataract and retina care in Pollachi since 2013, by one surgeon who sees you from the first examination to the last follow-up.'}</p>
         </div>
         <div>
