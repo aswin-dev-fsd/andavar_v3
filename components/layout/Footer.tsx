@@ -34,12 +34,26 @@ export default function Footer(){
         <div>
           <h3 className="text-[13px] font-semibold uppercase tracking-[.1em] text-[#7FBBDC]">{isTa?'எங்களை சந்திக்க':'Visit us'}</h3>
           <address className="mt-4 whitespace-pre-line not-italic text-[16px] leading-[1.65] text-[#C9D3D7]">{isTa?'எண். 73, பல்லடம் சாலை, LMHSS பள்ளி எதிரில், டி. கோட்டாம்பட்டி, பொள்ளாச்சி 642002':clinic.address}</address>
-          <div className="mt-4 grid gap-2">
-            <a className="flex items-center gap-2 font-medium text-white transition-colors hover:text-[#7FBBDC]" href="tel:04259221000"><PhoneIcon/>{clinic.phone}</a>
-            <a className="flex items-center gap-2 font-medium text-white transition-colors hover:text-[#7FBBDC]" href="tel:9442056767"><PhoneIcon/>{clinic.mobile}</a>
-            <a className="flex items-center gap-2 font-medium text-[#7FBBDC] transition-colors hover:text-white" href={clinic.maps}><MapIcon/>{isTa?'வழிகாட்டி →':'Get directions →'}</a>
+          <div className="mt-5 space-y-2.5">
+            <a className="flex items-center gap-2.5 text-[15.5px] font-medium text-white transition-colors hover:text-[#7FBBDC]" href="tel:04259221000">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[rgba(255,255,255,.08)] text-[#7FBBDC]"><PhoneIcon className="h-3.5 w-3.5"/></span>
+              <span>{clinic.phone}</span>
+              <span className="text-[12px] text-[#8496A0]">({isTa?'நிலையான எண்':'Landline'})</span>
+            </a>
+            <a className="flex items-center gap-2.5 text-[15.5px] font-medium text-white transition-colors hover:text-[#7FBBDC]" href="tel:9442056767">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[rgba(255,255,255,.08)] text-[#7FBBDC]"><PhoneIcon className="h-3.5 w-3.5"/></span>
+              <span>{clinic.mobile}</span>
+              <span className="text-[12px] text-[#8496A0]">({isTa?'கைபேசி':'Mobile'})</span>
+            </a>
+            <div className="pt-1">
+              <a className="inline-flex items-center gap-2 rounded-xl border border-[#50616B] bg-[rgba(255,255,255,.06)] px-4 py-2 text-[14px] font-medium text-[#7FBBDC] transition-all hover:border-white hover:bg-[rgba(255,255,255,.14)] hover:text-white" href={clinic.maps} target="_blank" rel="noopener noreferrer">
+                <MapIcon className="h-4 w-4"/>
+                <span>{isTa?'வரைபடத்தில் வழிகாட்டி':'Get directions'}</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
-          <p className="mt-4 text-[15px] text-[#8496A0]">{isTa?'திங்கள்–சனி · காலை 10:00 – பிற்பகல் 2:00 மற்றும் மாலை 5:00 – 7:00. ஞாயிறு விடுமுறை.':clinic.hours}</p>
+          <p className="mt-4 text-[14.5px] leading-relaxed text-[#8496A0]">{isTa?'திங்கள்–சனி · காலை 10:00 – பிற்பகல் 2:00 மற்றும் மாலை 5:00 – 7:00. ஞாயிறு விடுமுறை.':clinic.hours}</p>
         </div>
       </div>
       <div className="mt-12 border-t border-[#2A3237] pt-5 text-[14px] text-[#8496A0]">{isTa?'© 2026 ஸ்ரீ ஆண்டவர் கண் மருத்துவமனை & விழித்திரை மையம் · பொள்ளாச்சி, தமிழ்நாடு':'© 2026 Shri Andavar Eye Care and Retina Centre · Pollachi, Tamil Nadu'}</div>
