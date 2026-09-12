@@ -10,4 +10,5 @@ import Reveal from '@/components/ui/Reveal';
 import LocaleDocument from '@/components/ui/LocaleDocument';
 
 export function generateStaticParams(){return routing.locales.map(locale=>({locale}))}
-export default async function LocaleLayout({children,params}:{children:ReactNode;params:Promise<{locale:string}>}){const {locale}=await params;if(!hasLocale(routing.locales,locale))notFound();setRequestLocale(locale);const messages=await getMessages();return <NextIntlClientProvider messages={messages}><LocaleDocument locale={locale}/><Header/><main>{children}</main><Footer/><StickyCallBar/><Reveal/></NextIntlClientProvider>}
+export default async function LocaleLayout({children,params}:{children:ReactNode;params:Promise<{locale:string}>}){const {locale}=await params;if(!hasLocale(routing.locales,locale))notFound();setRequestLocale(locale);const messages=await getMessages();return <NextIntlClientProvider messages={messages}><LocaleDocument locale={locale}/><div className={locale==='ta'?'lang-ta':'lang-en'} lang={locale}><Header/><main>{children}</main><Footer/><StickyCallBar/><Reveal/></div></NextIntlClientProvider>}
+
