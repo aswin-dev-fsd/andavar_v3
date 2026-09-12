@@ -2,7 +2,9 @@ export type Locale = 'en' | 'ta';
 export type Band = 'ground' | 'warm' | 'cool' | 'ink';
 export const clinic = { name:'Shri Andavar Eye Care and Retina Centre', phone:'04259 221 000', mobile:'94420 56767', address:'No. 73, Palladam Road, Opposite LMHSS School, T. Kottampatti, Pollachi 642002', hours:'Mon–Sat · 10:00 AM – 2:00 PM and 5:00 – 7:00 PM. Sunday closed.', maps:'https://www.google.com/maps/search/?api=1&query=Shri%20Andavar%20Eye%20Care%20and%20Retina%20Centre%20Pollachi' };
 export const navItems = [
-  { label:'Treatments', href:'/treatments' }, { label:'Schemes', href:'/schemes' }, { label:'About', href:'/about' }
+  { label:'Treatments', labelTa:'சிகிச்சைகள்', href:'/treatments' },
+  { label:'Schemes', labelTa:'திட்டங்கள்', href:'/schemes' },
+  { label:'About', labelTa:'எங்களைப் பற்றி', href:'/about' }
 ];
 export const treatments = [
   { symptom:'Things look cloudy, faded, or washed out', title:'Cataract surgery', body:'The lens inside your eye has clouded. It is replaced with a clear artificial one in a day-care procedure — in by morning, home by evening.', href:'/cataract-surgery' },
