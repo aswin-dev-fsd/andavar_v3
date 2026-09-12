@@ -1,0 +1,15 @@
+{
+  "navigation": {
+    "treatments": "Treatments",
+    "surgeon": "Our Surgeon",
+    "schemes": "Schemes",
+    "visit": "Visit Us",
+    "about": "About"
+  },
+  "common": {
+    "call": "Call 04259 221 000",
+    "directions": "Get directions",
+    "callHospital": "Call the hospital",
+    "map": "Directions"
+  }
+}
